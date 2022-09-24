@@ -1,0 +1,460 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+#checkbox:checked ~ #box {
+  background-color: yellow;
+}
+
+.counter {
+  margin: 20px;
+}
+
+.counter .count {
+  width: 200px;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: yellow;
+  background-color: grey;
+}
+
+.counter .count::before {
+  content: '';
+  -webkit-animation: countdown 100s step-end 1 forwards;
+          animation: countdown 100s step-end 1 forwards;
+}
+
+.counter .count::after {
+  content: '';
+  -webkit-animation: countdown 10s step-end 10 forwards;
+          animation: countdown 10s step-end 10 forwards;
+}
+
+@-webkit-keyframes countdown {
+  0% {
+    content: "9";
+  }
+  10% {
+    content: "8";
+  }
+  20% {
+    content: "7";
+  }
+  30% {
+    content: "6";
+  }
+  40% {
+    content: "5";
+  }
+  50% {
+    content: "4";
+  }
+  60% {
+    content: "3";
+  }
+  70% {
+    content: "2";
+  }
+  80% {
+    content: "1";
+  }
+  90%, 100% {
+    content: "0";
+  }
+}
+
+@keyframes countdown {
+  0% {
+    content: "9";
+  }
+  10% {
+    content: "8";
+  }
+  20% {
+    content: "7";
+  }
+  30% {
+    content: "6";
+  }
+  40% {
+    content: "5";
+  }
+  50% {
+    content: "4";
+  }
+  60% {
+    content: "3";
+  }
+  70% {
+    content: "2";
+  }
+  80% {
+    content: "1";
+  }
+  90%, 100% {
+    content: "0";
+  }
+}
+
+.random .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.random .list li {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.random .list .list-1::before {
+  content: "68";
+}
+
+.random .list .list-2::before {
+  content: "81";
+}
+
+.random .list .list-3::before {
+  content: "25";
+}
+
+.random .list .list-4::before {
+  content: "81";
+}
+
+.random .list .list-5::before {
+  content: "90";
+}
+
+.random .list .list-6::before {
+  content: "47";
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #000;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .block {
+  width: 32%;
+  height: 32%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.container .block .index {
+  padding: 50px 60px;
+  cursor: pointer;
+}
+
+#checkbox-1:checked ~ #block-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate(135px);
+          transform: translate(135px);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#checkbox-1:checked ~ #block-1::before {
+  content: "2";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#checkbox-1:checked ~ #block-1 .index {
+  visibility: hidden;
+}
+
+#checkbox-1:checked ~ #block-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate(-135px);
+          transform: translate(-135px);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#checkbox-1:checked ~ #block-2::before {
+  content: "1";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#checkbox-1:checked ~ #block-2 .index {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+#checkbox-2:checked ~ #block-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate(0, 135px);
+          transform: translate(0, 135px);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#checkbox-2:checked ~ #block-2::before {
+  content: "2";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+#checkbox-2:checked ~ #block-2 .index {
+  visibility: hidden;
+}
+
+#checkbox-2:checked ~ #block-5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate(0, -135px);
+          transform: translate(0, -135px);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#checkbox-2:checked ~ #block-5::before {
+  content: "5";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#checkbox-2:checked ~ #block-5 .index {
+  visibility: hidden;
+}
+
+.main {
+  width: 200px;
+  height: 200px;
+  background-color: #0c0c0c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px auto;
+}
+
+.main .label {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main .label .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  height: 100%;
+  background-color: #1b1b1b;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 3px 4px black, inset 0 -2px 5px black, inset 0 2px 5px rgba(255, 255, 255, 0.5), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 5.5px #080808;
+          box-shadow: 0 3px 4px black, inset 0 -2px 5px black, inset 0 2px 5px rgba(255, 255, 255, 0.5), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 5.5px #080808;
+}
+
+.main .label .fa-solid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: #0c0c0c;
+}
+
+.main .label input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.main .label input[type="checkbox"]:checked ~ .fa-solid {
+  color: #00ffe7;
+  text-shadow: 0 0 15px #00a1ff, 0 0 30px #00a1ff;
+}
+
+.main .label input[type="checkbox"]:checked ~ .btn {
+  -webkit-box-shadow: 0 0 0 black, inset 0 -2px 5px black, inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 5.5px #00a1ff;
+          box-shadow: 0 0 0 black, inset 0 -2px 5px black, inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 5.5px #00a1ff;
+}
+
+section {
+  width: 400px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #042104;
+  -webkit-animation: anim 10s linear infinite;
+          animation: anim 10s linear infinite;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes anim {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+section .loader {
+  position: relative;
+}
+
+section .loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(calc(18deg * var(--i)));
+          transform: rotate(calc(18deg * var(--i)));
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+section .loader span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 1px #00ff0a, 0 0 2px #00ff0a, 0 0 0px #00ff0a, 0 0 1px #00ff0a, 0 0 1px #00ff0a, 0 0 10px #00ff0a;
+          box-shadow: 0 0 1px #00ff0a, 0 0 2px #00ff0a, 0 0 0px #00ff0a, 0 0 1px #00ff0a, 0 0 1px #00ff0a, 0 0 10px #00ff0a;
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+  -webkit-animation-delay: calc(0.1s * var(--i));
+          animation-delay: calc(0.1s * var(--i));
+}
+/*# sourceMappingURL=style.css.map */
